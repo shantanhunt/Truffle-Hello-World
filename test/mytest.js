@@ -11,4 +11,21 @@ contract('HelloWorld', function(accounts){
             assert.equal(balance.valueOf(), 1000, "1000 was not in the account");
         });
     });
+    
+    it("Should return the name Filip", function(){
+        return HelloWorld.deployed().then(function(instance){
+            return instance.getName.call();
+        }).then(function(name){
+            assert.equal(name, "Filip", "The name was not Filip");
+        });
+    });
+
+    it("Should Not return the name Filip", function(){
+        return HelloWorld.deployed().then(async function(instance){
+            await instance.setName('Bob');
+            return instance.getName.call();
+        }).then(function(name){
+            assert.notEqual(name, "Filip", "The name was Filip");
+        });
+    });
 }); 

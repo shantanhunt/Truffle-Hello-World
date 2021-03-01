@@ -14,7 +14,7 @@ contract HelloWorld {
         return name;
     }
 
-    function _setName(string memory _name) public {
+    function setName(string memory _name) public {
         name = _name;
     }
 }

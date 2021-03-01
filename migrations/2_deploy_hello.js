@@ -1,7 +1,7 @@
 const hello = artifacts.require('./HelloWorld');
 
 const helloSettings = {
-    name: "Filip"
+    name: "Shantanu"
 };
 
 module.exports = function(deployer){

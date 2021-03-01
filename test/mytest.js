@@ -12,20 +12,20 @@ contract('HelloWorld', function(accounts){
         });
     });
     
-    it("Should return the name Filip", function(){
+    it("Should return the name Shantanu", function(){
         return HelloWorld.deployed().then(function(instance){
             return instance.getName.call();
         }).then(function(name){
-            assert.equal(name, "Filip", "The name was not Filip");
+            assert.equal(name, "Shantanu", "The name was not Shantanu");
         });
     });
 
-    it("Should Not return the name Filip", function(){
+    it("Should Not return the name Shantanu", function(){
         return HelloWorld.deployed().then(async function(instance){
             await instance.setName('Bob');
             return instance.getName.call();
         }).then(function(name){
-            assert.notEqual(name, "Filip", "The name was Filip");
+            assert.notEqual(name, "Shantanu", "The name was Shantanu");
         });
     });
 }); 

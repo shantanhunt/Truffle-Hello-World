@@ -1,4 +1,4 @@
 # These are the Truffle Tests
 
-![](/Screenshots/test1.JPG)
+![](/Screenshots/test2.JPG)
 

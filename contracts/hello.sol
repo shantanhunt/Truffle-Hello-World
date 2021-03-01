@@ -6,7 +6,7 @@ contract HelloWorld {
     mapping (address => uint256) public balance;
 
     constructor() public {
-        name = "Filip";
+        name = "Shantanu";
         balance[msg.sender] = 1000;
     }
 
